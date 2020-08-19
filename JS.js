@@ -71,3 +71,45 @@ function getIDs(){
 // receoie.then(res=>{
 //     console.log(res);
 // })
+
+//AJAX "https://cors-anywhere.herokuapp.com/"--PULLING OUT CORS REQEUST
+
+const locationCode = 2487956;
+function getTemp(locationCode){
+    fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${locationCode}/`)
+    .then(res=>{
+        //console.log(res);
+        return res.json();
+    })
+    .then(data=>{
+        const today = data.consolidated_weather[0];
+        console.log(`Today Temprature in ${data.title} will stay between ${today.min_temp} and ${today.max_temp}.`)
+        const sanfrans = `Today Temprature in ${data.title} will stay between ${today.min_temp} and ${today.max_temp}.`;
+        const ele = document.createElement("h2");
+        ele.textContent=sanfrans;
+        document.querySelector("body").insertAdjacentElement("beforeend",ele);
+    })
+    .catch(()=>{
+        alert(`Unable To Get Data From Sever www.metaweather.com for your given location`);
+    });
+};
+
+getTemp(locationCode);
+
+async function getWeatherState(yourLocation){
+    try {const file = await fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${yourLocation}/`);
+    //console.log(file);
+    const data = await file.json();
+    //console.log(data);
+    console.log(`Today's weather for the ${data.title} will be like ${data.consolidated_weather[0].weather_state_name}`);
+    const london = `Today's weather for the ${data.title} will be like ${data.consolidated_weather[0].weather_state_name}`;
+    const ele = document.createElement("h2");
+    ele.textContent=london;
+    document.querySelector("body").insertAdjacentElement("beforeend",ele);}
+    catch {()=>{
+        alert(`Unable To Get Data From Sever www.metaweather.com for your given location`);
+    }
+    }
+}
+
+getWeatherState(44418);
