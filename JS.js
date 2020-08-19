@@ -17,29 +17,29 @@ function getIDs(){
 */
 //PROMISES
 
-let getIDs = new Promise((resolve,reject)=>{
-    setTimeout(()=>{
-        resolve([432,123,412,534]);
-    },1500);
-});
+// let getIDs = new Promise((resolve,reject)=>{
+//     setTimeout(()=>{
+//         resolve([432,123,412,534]);
+//     },1500);
+// });
 
-let getRecipie = id =>{
-    return new Promise((resolve,reject)=>{
-        setTimeout((id)=>{
-            let recepie = {name: "Tomato Crush",Publisher: "Kushagra"};
-            resolve([`${id}: ${recepie.name}.`,recepie]);
-        },1500,id);
-    });
-};
+// let getRecipie = id =>{
+//     return new Promise((resolve,reject)=>{
+//         setTimeout((id)=>{
+//             let recepie = {name: "Tomato Crush",Publisher: "Kushagra"};
+//             resolve([`${id}: ${recepie.name}.`,recepie]);
+//         },1500,id);
+//     });
+// };
 
-let getMoreRecipie = pub =>{
-    return new Promise((resolve,reject)=>{
-        setTimeout((pub)=>{
-            let recepie = {name: "Cheese Burst",Publisher: "Kushagra"};
-            resolve([pub,recepie]);
-        },1500,pub);
-    });
-}
+// let getMoreRecipie = pub =>{
+//     return new Promise((resolve,reject)=>{
+//         setTimeout((pub)=>{
+//             let recepie = {name: "Cheese Burst",Publisher: "Kushagra"};
+//             resolve([pub,recepie]);
+//         },1500,pub);
+//     });
+// }
 /*
 // getIDs
 // .then((ids)=>{
@@ -57,17 +57,17 @@ let getMoreRecipie = pub =>{
 //     console.log("Failed To Load Data.")
 // })
 */
-async function getRecipieIds(){
-    let ids = await getIDs;
-    console.log(ids);
-    let reipe = await getRecipie(ids[2]);
-    console.log(reipe[0]);
-    let moreRecipe = await getMoreRecipie(reipe[1].Publisher);
-    console.log(`${moreRecipe[0]}: Other Populars ${moreRecipe[1].name}`);
-    return reipe;
-};
+// async function getRecipieIds(){
+//     let ids = await getIDs;
+//     console.log(ids);
+//     let reipe = await getRecipie(ids[2]);
+//     console.log(reipe[0]);
+//     let moreRecipe = await getMoreRecipie(reipe[1].Publisher);
+//     console.log(`${moreRecipe[0]}: Other Populars ${moreRecipe[1].name}`);
+//     return reipe;
+// };
 
-const receoie = getRecipieIds();
-receoie.then(res=>{
-    console.log(res);
-})
+// const receoie = getRecipieIds();
+// receoie.then(res=>{
+//     console.log(res);
+// })
