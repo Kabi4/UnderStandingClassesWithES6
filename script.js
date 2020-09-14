@@ -7,7 +7,7 @@ let job;
 
 //IIFE's and block method
 {
-    let rand = Math.random();
+    let rand = Math.random(); 
 }
 
 
