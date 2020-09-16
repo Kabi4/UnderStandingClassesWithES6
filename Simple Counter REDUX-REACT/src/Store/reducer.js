@@ -1,3 +1,5 @@
+import * as actionTypes from './action/actionTypes';
+
 const initialState = {
     counter: 0,
     result: []
@@ -5,27 +7,27 @@ const initialState = {
 
 const reducer = (state=initialState,action)=>{
     switch(action.type){
-        case("INCREMENT_EVENT"):
+        case(actionTypes.INCREMENT_EVENT):
             return{
                 ...state,
                 counter: state.counter+1
             }
-        case ("DECREMENT_EVENT"):
+        case (actionTypes.DECREMENT_EVENT):
             return{
                 ...state,
                 counter: state.counter-1
             }
-        case ("ADDITION_EVENT"):
+        case (actionTypes.ADDITION_EVENT):
             return{
                 ...state,
                 counter: state.counter+action.payload.value
             }
-        case ("SUBTRACTION_EVENT"):
+        case (actionTypes.SUBTRACTION_EVENT):
             return{
                 ...state,
                 counter: state.counter-action.payload.value
             }
-        case ("ADDRESULT_EVENT"):
+        case (actionTypes.ADDRESULT_EVENT):
             const num = state.counter;
             const updatedResult = [...state.result];
             updatedResult.push(num);
@@ -33,7 +35,7 @@ const reducer = (state=initialState,action)=>{
                 ...state,
                 result: updatedResult
             }   
-        case ("DELETERESULT_EVENT"):
+        case (actionTypes.DELETERESULT_EVENT):
             const nums = [...state.result];
             nums.splice(action.payload.id,1);
             return{
