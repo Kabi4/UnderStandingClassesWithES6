@@ -1,7 +1,7 @@
 //CALLBACK FUNCTIONS
 /*
 function getIDs(){
-    setTimeout(()=>{
+    setTimeout(()=>{ 
         var IDs = [432,123,412,534];
         console.log(IDs);
         setTimeout(id=>{ 
@@ -26,7 +26,7 @@ function getIDs(){
 // let getRecipie = id =>{
 //     return new Promise((resolve,reject)=>{
 //         setTimeout((id)=>{
-//             let recepie = {name: "Tomato Crush",Publisher: "Kushagra"};
+//             let recepie = {name: "Tomato Crush",Publisher: "Kushagra"}; 
 //             resolve([`${id}: ${recepie.name}.`,recepie]);
 //         },1500,id);
 //     });
