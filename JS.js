@@ -2,7 +2,7 @@
 /*
 function getIDs(){
     setTimeout(()=>{ 
-        var IDs = [432,123,412,534];
+        var IDs = [432,123,412,534]; 
         console.log(IDs);
         setTimeout(id=>{ 
             let recepie = {name: "Tomato Crush",Publisher: "Kushagra"};
