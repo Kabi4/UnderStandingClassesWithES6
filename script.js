@@ -169,7 +169,7 @@ class athelete extends Person{
         }
         description(){
             if(length<20){
-                this.type = "Tiny Street";
+                this.type = "Tiny Street"; 
             }
             else if(length<30){
                 this.type = "Small Street"
