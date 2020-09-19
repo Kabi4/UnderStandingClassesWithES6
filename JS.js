@@ -1,7 +1,7 @@
 //CALLBACK FUNCTIONS
 /*
 function getIDs(){
-    setTimeout(()=>{ 
+    setTimeout(()=>{  
         var IDs = [432,123,412,534]; 
         console.log(IDs);
         setTimeout(id=>{ 
