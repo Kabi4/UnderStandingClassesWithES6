@@ -34,7 +34,7 @@ function getIDs(){
 
 // let getMoreRecipie = pub =>{
 //     return new Promise((resolve,reject)=>{
-//         setTimeout((pub)=>{
+//         setTimeout((pub)=>{ 
 //             let recepie = {name: "Cheese Burst",Publisher: "Kushagra"};
 //             resolve([pub,recepie]);
 //         },1500,pub);
@@ -61,7 +61,7 @@ function getIDs(){
 //     let ids = await getIDs;
 //     console.log(ids);
 //     let reipe = await getRecipie(ids[2]);
-//     console.log(reipe[0]);
+//     console.log(reipe[0]); 
 //     let moreRecipe = await getMoreRecipie(reipe[1].Publisher);
 //     console.log(`${moreRecipe[0]}: Other Populars ${moreRecipe[1].name}`);
 //     return reipe;
