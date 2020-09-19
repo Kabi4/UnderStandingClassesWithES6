@@ -22,7 +22,7 @@ name.endsWith("tha");//true
 name.includes("oh");//true
 
 //template literals
-console.log(`Hey ${name} here. I am ${age} years old. I am a ${job='Coder'}.`)
+console.log(`Hey ${name} here. I am ${age} years old. I am a ${job='Coder'}.`) 
 
 //Arrow Function
 document.onmouseleave = (e)=>{
