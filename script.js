@@ -1,7 +1,7 @@
 /*
 //variables
 var firstName;
-let lastName; 
+let lastName;  
 const age=10;
 let job;
 
